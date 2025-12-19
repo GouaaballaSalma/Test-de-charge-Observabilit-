@@ -1,0 +1,5 @@
+En environnement multi-instances, plusieurs services peuvent accéder au même stock simultanément.
+Le verrouillage en base de données garantit qu’une seule transaction modifie le stock à la fois.
+Sans verrou DB, des incohérences ou un stock négatif peuvent apparaître sous charge.
+Le circuit breaker empêche la propagation des pannes lorsqu’un service distant est indisponible.
+Le fallback permet de continuer le service avec une valeur par défaut (price = 0.0).
